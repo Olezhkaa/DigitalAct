@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.digitalact.Presentation.UI.Fragment.HomeFragment"
+        android:label="Главная"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_actsFragment"
+            app:destination="@id/actsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_routsFragment"
+            app:destination="@id/routsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actsFragment"
+        android:name="com.example.digitalact.Presentation.UI.Fragment.ActsFragment"
+        android:label="Акты"
+        tools:layout="@layout/fragment_acts" >
+        <action
+            android:id="@+id/action_actsFragment_to_choiceActFragment"
+            app:destination="@id/choiceActFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routsFragment"
+        android:name="com.example.digitalact.Presentation.UI.Fragment.RoutsFragment"
+        android:label="Маршруты"
+        tools:layout="@layout/fragment_routs" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.digitalact.Presentation.UI.Fragment.ReportsFragment"
+        android:label="Отчеты"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/choiceActFragment"
+        android:name="com.example.digitalact.Presentation.UI.Fragment.ChoiceActFragment"
+        android:label="Выбор акта"
+        tools:layout="@layout/fragment_choice_act" >
+        <action
+            android:id="@+id/action_choiceActFragment_to_addChangeActFragment"
+            app:destination="@id/addChangeActFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addChangeActFragment"
+        android:name="com.example.digitalact.Presentation.UI.Fragment.AddChangeActFragment"
+        android:label="Заполнение акта"
+        tools:layout="@layout/fragment_add_change_act" >
+        <action
+            android:id="@+id/action_addChangeActFragment_to_changeSpinnerFragment"
+            app:destination="@id/changeSpinnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeSpinnerFragment"
+        android:name="com.example.digitalact.Presentation.UI.Fragment.ChangeSpinnerFragment"
+        android:label="Изменение списка"
+        tools:layout="@layout/fragment_change_spinner" />
+</navigation>

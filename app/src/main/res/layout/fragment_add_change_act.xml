@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Presentation.UI.Fragment.AddChangeActFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Presentation.Activity.AddChangeActsActivity">
+
+        <ScrollView
+            android:id="@+id/changeActScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="20dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/oldFill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/accountNumberTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Лицевой счет"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/accountNumberRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <Spinner
+                            android:id="@+id/accountNumberSpinner"
+                            style="@style/FieldsFillAct"
+                            android:layout_alignParentLeft="true"/>
+
+                        <ImageView
+                            android:src="@drawable/drop_down_drawable"
+                            android:theme="@style/imageButtonTheme"
+                            android:layout_alignRight="@id/accountNumberSpinner"
+                            style="@style/dropDownImage" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Адрес" />
+
+                    <TextView
+                        android:id="@+id/addressEditText"
+                        style="@style/FieldsFillAct"/>
+
+                    <TextView
+                        android:id="@+id/fullNameTextView"
+                        style="@style/textViewFillAct"
+                        android:text="ФИО" />
+
+                    <TextView
+                        android:id="@+id/fullNameEditText"
+                        style="@style/FieldsFillAct" />
+
+                    <TextView
+                        android:id="@+id/typeOldPUTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Тип старого ПУ" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/typeOldPUEditText"
+                            style="@style/FieldsFillAct"
+                            android:layout_alignParentLeft="true"
+                            android:paddingRight="50dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <ImageView
+                            android:src="@drawable/pen_drawable"
+                            android:theme="@style/imageButtonTheme"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_alignRight="@id/typeOldPUEditText"
+                            android:contentDescription="Pen"
+                            style="@style/dropDownImage" />
+
+
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/numberOldPUTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Номер старого ПУ" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/numberOldPUEditText"
+                            style="@style/FieldsFillAct"
+                            android:layout_alignParentLeft="true"
+                            android:paddingRight="50dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <ImageView
+                            android:src="@drawable/pen_drawable"
+                            android:theme="@style/imageButtonTheme"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:contentDescription="Pen"
+                            android:layout_alignRight="@id/numberOldPUEditText"
+                            style="@style/dropDownImage" />
+
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/typeOldTTTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Тип старого ТТ"
+                        />
+
+                    <EditText
+                        android:id="@+id/typeOldTTEditText"
+                        style="@style/FieldsFillAct"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/numberOldTTOneTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Номер старого ТТ"
+                        />
+
+                    <EditText
+                        android:id="@+id/numberOldTTOneEditText"
+                        style="@style/FieldsFillAct"
+                        android:hint="1"
+                        />
+
+                    <EditText
+                        android:id="@+id/numberOldTTTwoEditText"
+                        style="@style/FieldsFillAct"
+                        android:hint="2"
+                        />
+
+                    <EditText
+                        android:id="@+id/numberOldTTThreeEditText"
+                        style="@style/FieldsFillAct"
+                        android:hint="3"
+                        />
+
+                    <TextView
+                        android:id="@+id/reasonReplacementTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Причина замены" />
+
+                    <TextView
+                        android:id="@+id/reasonReplacementEditText"
+                        style="@style/FieldsFillAct" />
+
+                    <TextView
+                        android:id="@+id/numberApplicationTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Номер заявки" />
+
+                    <TextView
+                        android:id="@+id/numberApplicationEditText"
+                        style="@style/FieldsFillAct" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/typeNewPUTextView"
+                    style="@style/textViewFillAct"
+                    android:text="Тип нового ПУ"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/typeNewPURelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <Spinner
+                        android:id="@+id/typeNewPUSpinner"
+                        style="@style/FieldsFillAct"
+                        android:layout_alignParentLeft="true"/>
+
+                    <ImageView
+                        android:src="@drawable/drop_down_drawable"
+                        android:theme="@style/imageButtonTheme"
+                        android:layout_alignRight="@id/typeNewPUSpinner"
+                        style="@style/dropDownImage" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/numberNewPUTextView"
+                    style="@style/textViewFillAct"
+                    android:text="Номер нового ПУ"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/numberNewPURelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/numberNewPUEditText"
+                        style="@style/FieldsFillAct"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/barcodeNumberNewPUButton" />
+
+                    <ImageButton
+                        android:id="@+id/barcodeNumberNewPUButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/barcode_drawable"
+                        android:background="@color/transparent"
+                        android:theme="@style/imageButtonTheme"
+                        android:layout_alignParentRight="true"
+                        android:paddingTop="5dp" />
+
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:id="@+id/typeNewTTTextView"
+                    style="@style/textViewFillAct"
+                    android:text="Тип нового ТТ"
+                    />
+
+                <EditText
+                    android:id="@+id/typeNewTTEditText"
+                    style="@style/FieldsFillAct"
+                    />
+
+                <TextView
+                    android:id="@+id/numberNewTTOneTextView"
+                    style="@style/textViewFillAct"
+                    android:text="Номер нового ТТ"
+                    />
+
+                <EditText
+                    android:id="@+id/numberNewTTOneEditText"
+                    style="@style/FieldsFillAct"
+                    android:hint="1"
+                    />
+
+                <EditText
+                    android:id="@+id/numberNewTTTwoEditText"
+                    style="@style/FieldsFillAct"
+                    android:hint="2"
+                    />
+
+                <EditText
+                    android:id="@+id/numberNewTTThreeEditText"
+                    style="@style/FieldsFillAct"
+                    android:hint="3"
+                    />
+
+                <TextView
+                    android:id="@+id/sealPUTextView"
+                    style="@style/textViewFillAct"
+                    android:text="Пломба ПУ"
+                    />
+
+                <EditText
+                    android:id="@+id/sealPUOneEditText"
+                    style="@style/FieldsFillAct"
+                    android:hint="1"
+                    />
+
+                <EditText
+                    android:id="@+id/sealPUTwoEditText"
+                    style="@style/FieldsFillAct"
+                    android:hint="2"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/sealPUThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    >
+
+                    <EditText
+                        android:id="@+id/sealPUThreeOneEditText"
+                        style="@style/FieldsFillAct"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:hint="1"
+                        android:layout_marginRight="1dp"/>
+
+                    <EditText
+                        android:id="@+id/sealPUThreeTwoEditText"
+                        style="@style/FieldsFillAct"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:hint="2"
+                        android:layout_marginHorizontal="1dp"/>
+
+                    <EditText
+                        android:id="@+id/sealPUThreeThreeEditText"
+                        style="@style/FieldsFillAct"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:hint="3"
+                        android:layout_marginLeft="1dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/simCardTextView"
+                    style="@style/textViewFillAct"
+                    android:text="sim-карта"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/simCardRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/simCardEditText"
+                        style="@style/FieldsFillAct"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@id/simCardButton"/>
+
+                    <ImageButton
+                        android:id="@+id/simCardButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/barcode_drawable"
+                        android:background="@color/transparent"
+                        android:theme="@style/imageButtonTheme"
+                        android:paddingTop="5dp"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/sendMessageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Отправить код"
+                    android:textSize="20sp"
+                    style="@style/buttonMain"
+                    android:visibility="gone"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lastFill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/dateCompletionTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Дата выполнения"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/dateCompletionRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/dateCompletionEditText"
+                            style="@style/FieldsFillAct"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@id/dateCompletionButton"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/dateCompletionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/calendar_drawable"
+                            android:background="@color/transparent"
+                            android:theme="@style/imageButtonTheme"
+                            android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/fullNameExecutorTextView"
+                        style="@style/textViewFillAct"
+                        android:text="ФИО исполнителя"
+                        />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/fullNameExecutorSpinner"
+                            style="@style/FieldsFillAct"
+                            android:layout_alignParentLeft="true"/>
+
+                        <ImageView
+                            android:src="@drawable/drop_down_drawable"
+                            android:theme="@style/imageButtonTheme"
+                            android:layout_alignRight="@id/fullNameExecutorSpinner"
+                            style="@style/dropDownImage" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/installationLocationTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Место установки"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/installationLocationSpinner"
+                            style="@style/FieldsFillAct"
+                            android:layout_alignParentLeft="true"/>
+
+                        <ImageView
+                            android:src="@drawable/drop_down_drawable"
+                            android:layout_alignRight="@id/installationLocationSpinner"
+                            style="@style/dropDownImage"
+                            android:theme="@style/imageButtonTheme"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/commentTextView"
+                        style="@style/textViewFillAct"
+                        android:text="Примечание"
+                        />
+
+                    <EditText
+                        android:id="@+id/commentEditText"
+                        style="@style/FieldsFillAct"
+                        />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/nextPageButton"
+                    android:text="Следующая страница"
+                    style="@style/buttonMain"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:text="Сохранить"
+                    style="@style/buttonMain"
+
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:text="Удалить"
+                    style="@style/buttonMain"
+
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

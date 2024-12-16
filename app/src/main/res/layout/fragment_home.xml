@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Presentation.UI.Fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            style="@style/textTitle"
+            android:text="Цифровой акт"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:id="@+id/downloadTaskButton"
+                style="@style/buttonMain"
+                android:layout_width="match_parent"
+                android:maxLines="2"
+                android:text="Загрузить задания" />
+
+            <Button
+                android:id="@+id/downloadTelephoneButton"
+                style="@style/buttonMain"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:maxLines="2"
+                android:text="Загрузить номера" />
+
+            <Button
+                android:id="@+id/actsButton"
+                style="@style/buttonMain"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:text="Акты" />
+
+            <Button
+                android:id="@+id/routsButton"
+                style="@style/buttonMain"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Маршруты"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/reportsButton"
+                style="@style/buttonMain"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Отчеты" />
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
